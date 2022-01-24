@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h5 class="my-3 border-bottom pb-2">질문등록</h5>
+    <form method="post" class="post-form my-3">
+        {% csrf_token %}
+        <!-- 오류표시 Start -->
+        {% if form.errors %}
+            <div class="alert alert-danger" role="alert">
+            {% for field in form %}
+                {% if field.errors %}
+                <strong>{{ field.label }}</strong>
+                {{ field.errors }}
+                {% endif %}
+            {% endfor %}
+            </div>
+        {% endif %}
+        <!-- 오류표시 End -->
+        <div class="form-group">
+            <label for="subject">제목</label>
+            <input type="text" class="form-control" name="subject" id="subject"
+                   value="{{ form.subject.value|default_if_none:'' }}">
+        </div>
+
+        <div class="form-group">
+            <label for="grade">학년</label>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="grade" id="grade0" value="전체" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="grade0">전체</label>
+
+                <input type="radio" class="btn-check" name="grade" id="grade1" value="1학년" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="grade1">1</label>
+
+                <input type="radio" class="btn-check" name="grade" id="grade2" value="2학년" autocomplete="off">
+                <label class="btn btn-outline-primary" for="grade2">2</label>
+
+                <input type="radio" class="btn-check" name="grade" id="grade3" value="3학년" autocomplete="off">
+                <label class="btn btn-outline-primary" for="grade3">3</label>
+
+                <input type="radio" class="btn-check" name="grade" id="grade4" value="4학년" autocomplete="off">
+                <label class="btn btn-outline-primary" for="grade4">4</label>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label for="content">내용</label>
+            <textarea class="form-control" name="content"
+                      id="content" rows="10">{{ form.content.value|default_if_none:'' }}</textarea>
+        </div>
+        <button type="submit" class="btn btn-dark my-3">저장하기</button>
+    </form>
+</div>
+{% endblock %}

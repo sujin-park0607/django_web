@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% block content %}
+       <header class="bg-dark py-5">
+            <div class="container px-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="text-center my-5">
+                            <h1 class="display-5 fw-bolder text-white mb-2">I</h1><div class="lead text-white-50 mb-4">information</div>
+                            <h1 class="display-5 fw-bolder text-white mb-2">G</h1><div class="lead text-white-50 mb-4">graphic</div>
+                            <h1 class="display-5 fw-bolder text-white mb-2">C</h1><div class="lead text-white-50 mb-4">council</div>
+
+                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                                <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">학과소개</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="py-5 border-bottom" id="features">
+            <div class="container px-5 my-5">
+                <div class="row gx-5">
+                    <div class="col-lg-3 mb-5 mb-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
+                        <h2 class="h4 fw-bolder">학과소개</h2>
+                        <p> 인공지능 소프트웨어, 담당 교수님, IGC학생회의 관한 기본 정보들을 확인하실 수 있습니다</p>
+                        <a class="text-decoration-none" href="{% url 'main:major' %}">
+                            더 알아보기
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 mb-5 mb-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
+                        <h2 class="h4 fw-bolder">게시판</h2>
+                        <p>게시판을 통해 건의사항을 올려주실수 있고, 익명게시판으로 커뮤니케이션이 가능한 소통 게시판입니다.</p>
+                        <a class="text-decoration-none" href="{% url 'pybo:index' %}">
+                            더 알아보기
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                        <h2 class="h4 fw-bolder">공지사항</h2>
+                        <p>학년별로 알맞는 공지를 확인하실 수 있으며, 학사일정을 확인하실 수 있습니다.</p>
+                        <a class="text-decoration-none" href="{% url 'notice:index' %}">
+                            더 알아보기
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 mb-5 mb-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
+                        <h2 class="h4 fw-bolder">사진첩</h2>
+                        <p>학교 및 학과 행사 등의 사진들을 확인하실 수 있습니다.</p>
+                        <a class="text-decoration-none" href="{% url 'photos:gallery' %}">
+                            더 알아보기
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials section-->
+        <section class="py-5 border-bottom">
+            <div class="container px-5 my-5 px-5">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bolder">이제는 4차산업혁명의 시대!</h2>
+                    <p class="lead mb-0">인공지능소프트웨어하고과를 위한 한마디</p>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-6">
+                        <!-- Testimonial 1-->
+                        <div class="card mb-4">
+                            <div class="card-body p-4">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i></div>
+                                    <div class="ms-4">
+                                        <p class="mb-1">인공지능이야 말로 세계최고로 미래를 위한 도약!<br>과를 정말 잘 선택하셨습니다<br> 저 학생회장 나호연만을 믿고 따라주신다면 당신은 이 세계를 이끌 인재가 될 것입니다</p>
+                                        <div class="small text-muted">- 나호연</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 2-->
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i></div>
+                                    <div class="ms-4">
+                                        <p class="mb-1">재학중에 많은것을 배우고 느끼는 학과였습니다.<br> 지식적으로 뿐만아니라 실무적으로도 다양한 기술들을 배웠습니다<br>열정열정열정</p>
+                                        <div class="small text-muted">- 윤종현</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}

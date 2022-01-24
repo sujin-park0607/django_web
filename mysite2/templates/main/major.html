@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+<p class="row p-5">
+  <a class="btn col-3 p-5" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><img class="btn-img" src="/static/img/computer_icon.png" style="width:80%"><br><br>학과소개</a>
+  <button class="btn col-3 p-5" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2"><img class="btn-img" src="/static/img/professior_icon.png" style="width:80%"><Br><br>교수님 소개</button>
+  <button class="btn col-3 p-5" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample2"><img class="btn-img" src="/static/img/handshake_icon.png" style="width:80%"><Br><Br>학생회소개</button>
+  <button class="btn col-3"  type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">모두 보기</button>
+</p>
+  <div class="col p-5">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+        <img src="/static/img/computer10.jpg" style="width:70%"><Br>
+        미래 산업의 핵심 고부가가치 기술인 소프트웨어 기술은 4차 산업의 핵심 플랫폼으로서 그 중요성이 증대되고 있다.<br>
+        스마트폰, 인터넷은행, 전자정부 등 다양한 정보 시스템을 비롯하여 스마트 공장, 자율주행 자동차, 아마존 알렉사 같은 지능형 소프트웨어 기술이 지능정보사회로 가는 큰 변화를 주도하고 있다.<br>
+        인공지능소프트웨어전공은 약 35년의 역사를 지닌 컴퓨터정보공학과를 모태로 지능형 소프트웨어 산업에 기여할 수 있는 창의적 문제해결 능력과 실무 능력을 갖춘 소프트웨어 인재를 양성하고 있다.<br>
+        인공지능소프트웨어전공에서는 컴퓨터공학의 주요 이론교육은 물론 소프트웨어를 개발할 수 있는 실무교육과 지능형 소프트웨어 응용교육을 진행하고 있다.
+      </div>
+    </div>
+  </div>
+  <div class="col p-5">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body">
+        <div class="row">
+          <div class="col">
+            <img src="/static/img/장영건.png" style="width:250px; height:300px;"><Br>
+            장영건교수님이십니다<br>
+            주요담당 교과목으로는<br>
+            인공지능캡스톤디자인이 있습니다.<br>
+
+            <img src="/static/img/구흥서.png" style="width:250px; height:300px;"><Br>
+            <p>구흥서교수님이십니다<br>
+            주요담당 교과목으로는<br>
+              파이썬프로그래밍1, 데이터베이스가 있습니다.<br>
+          </div>
+
+          <div class="col">
+            <img src="/static/img/노기섭.png" style="width:250px; height:300px;"><Br>
+            <p>노기섭교수님이십니다<br>
+            주요담당 교과목으로는<br>
+              SW공학, 알고리즘설계, 인공지능캡스톤디자인이 있습니다.<br>
+
+            <img src="/static/img/박현준.png" style="width:250px; height:300px;"><Br>
+            <p>전공장 교수님이신 박현준 교수님이십니다<br>
+            주요담당 교과목으로는<br>
+            JAVA프로그래밍1, 인공신경망이 있습니다.<br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col p-5">
+    <div class="collapse multi-collapse" id="multiCollapseExample3">
+      <div class="card card-body">
+        <img src="/static/img/2021학생회사진.jpg"><Br>
+        저희 학생회가 내세우고 있는 학생회 이름은 IGC 입니다.<br>
+        약어의 의미는 IGC(Information Graphics Council)입니다.<br>
+        저희 학생회의 슬로건은 다양한 정보를 쉽고 빠르게 전달하는 학생회 입니다.<br>
+        인원은 학생회장 17 나호연 부학생회장 18 조재현 외 8명(사무부장 17 최민수, 홍보부장 17 윤종현, 여학우부장 18 박수진, 기획부장 20 강경민,<br>
+          체육부장 20 현윤선, 홍보차장 19 손윤정, 여학우차장 19 석효리, 기획차장 20 이진경)으로 구성되어 있습니다.
+      </div>
+    </div>
+  </div>
+{% endblock %}

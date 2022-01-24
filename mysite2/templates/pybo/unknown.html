@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="grid">
+    <div class="list">
+        <h1>게시판</h1>
+        <ul>
+            <li><a href="{% url 'pybo:index' %}">건의사항</a></li>
+            <li><a href="{% url 'pybo:unknown' %}">익명게시판</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        익명게시판입니다
+    </div>
+</div>
+{% endblock %}
